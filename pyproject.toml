@@ -14,7 +14,9 @@ dependencies = [
     "seaborn (>=0.13.2,<0.14.0)",
     "python-dotenv (>=1.1.1,<2.0.0)",
     "pyarrow (>=21.0.0,<22.0.0)",
-    "tenacity (>=9.1.2,<10.0.0)"
+    "tenacity (>=9.1.2,<10.0.0)",
+    "pyspark (>=4.0.1,<5.0.0)",
+    "delta-spark (>=4.0.0,<5.0.0)"
 ]
 packages = [{ include = "pipelines", from = "src" }, { include = "common", from = "src" }]
 package-mode = false
@@ -26,3 +28,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 ingestao = "pipelines.run_all:main"
+
+[tool.poetry]
+package-mode = false
